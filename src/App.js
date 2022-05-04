@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from  'react'
+import AverageRating from './AverageRating';
+import Reviews from './Reviews';
+import SentimentAnalysis from './SentimentAnalysis';
+import Sidebar from './Sidebar';
+import './styles.css'
+import WebsiteVisitations from './WebsiteVisitations';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Sidebar />
+      <Reviews reviews={1281} />
+      <AverageRating avgRating={4.6} />
+      <SentimentAnalysis analysis={960} />
+      <WebsiteVisitations webVisits={821} />
     </div>
   );
 }
